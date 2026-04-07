@@ -1,0 +1,49 @@
+# ============================================================
+# Smart 2FA Manager (Gui)
+# https://github.com/smartlegionlab/smart-2fa-manager-gui
+# Copyright (©) 2026, Alexander Suvorov. All rights reserved.
+# License: BSD 3-Clause
+# ============================================================
+import sys
+from PyQt5.QtWidgets import QApplication
+from PyQt5.QtCore import Qt
+from PyQt5.QtGui import QPalette, QColor
+
+from core.main_window import MainWindow
+
+
+def setup_dark_theme(app):
+    app.setStyle('Fusion')
+
+    dark_palette = QPalette()
+    dark_palette.setColor(QPalette.Window, QColor(30, 30, 30))
+    dark_palette.setColor(QPalette.WindowText, Qt.white)
+    dark_palette.setColor(QPalette.Base, QColor(20, 20, 20))
+    dark_palette.setColor(QPalette.AlternateBase, QColor(40, 40, 40))
+    dark_palette.setColor(QPalette.ToolTipBase, QColor(50, 50, 50))
+    dark_palette.setColor(QPalette.ToolTipText, Qt.white)
+    dark_palette.setColor(QPalette.Text, Qt.white)
+    dark_palette.setColor(QPalette.Button, QColor(50, 50, 50))
+    dark_palette.setColor(QPalette.ButtonText, Qt.white)
+    dark_palette.setColor(QPalette.BrightText, Qt.red)
+    dark_palette.setColor(QPalette.Link, QColor(42, 130, 218))
+    dark_palette.setColor(QPalette.Highlight, QColor(42, 130, 218))
+    dark_palette.setColor(QPalette.HighlightedText, Qt.black)
+    dark_palette.setColor(QPalette.Disabled, QPalette.Text, QColor(100, 100, 100))
+    dark_palette.setColor(QPalette.Disabled, QPalette.ButtonText, QColor(100, 100, 100))
+
+    app.setPalette(dark_palette)
+
+
+def main():
+    app = QApplication(sys.argv)
+    setup_dark_theme(app)
+
+    window = MainWindow()
+    window.show()
+
+    sys.exit(app.exec_())
+
+
+if __name__ == '__main__':
+    main()

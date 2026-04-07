@@ -1,0 +1,10 @@
+# ============================================================
+# Smart 2FA Manager (Gui)
+# https://github.com/smartlegionlab/smart-2fa-manager-gui
+# Copyright (©) 2026, Alexander Suvorov. All rights reserved.
+# License: BSD 3-Clause
+# ============================================================
+"""Lightweight, offline, independent TOTP 2FA manager for Linux with graphical interface."""
+__version__ = "v1.0.0"
+__author__ = "Alexander Suvorov"
+__all__ = ['totp_manager', 'main_window', 'dialogs']
