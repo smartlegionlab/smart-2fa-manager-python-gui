@@ -12,7 +12,7 @@ from typing import Optional, Dict
 CONFIG_DIR = Path.home() / ".2fa"
 SECRETS_ENC = CONFIG_DIR / "secrets.gpg"
 BACKUP_DIR = CONFIG_DIR / "backups"
-VERSION = "v1.0.1"
+VERSION = "v1.0.2"
 
 
 class TOTPManager:

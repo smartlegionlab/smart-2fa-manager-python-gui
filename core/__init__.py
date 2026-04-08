@@ -5,6 +5,6 @@
 # License: BSD 3-Clause
 # ==============================================================
 """Offline, independent TOTP 2FA manager for Linux with graphical interface."""
-__version__ = "v1.0.1"
+__version__ = "v1.0.2"
 __author__ = "Alexander Suvorov"
 __all__ = ['totp_manager', 'main_window', 'dialogs', '__version__']

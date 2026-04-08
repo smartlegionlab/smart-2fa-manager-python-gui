@@ -1,4 +1,4 @@
-# Smart 2FA Manager (GUI) <sup>v1.0.1</sup>
+# Smart 2FA Manager (GUI) <sup>v1.0.2</sup>
 
 ---
 
