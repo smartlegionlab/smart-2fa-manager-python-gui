@@ -256,7 +256,7 @@ class QRCodeDialog(QDialog):
                 qr_label = QLabel(result.stdout)
                 qr_label.setFont(QFont("Monospace", 10))
                 qr_label.setAlignment(Qt.AlignCenter)
-                qr_label.setStyleSheet("background-color: white; color: black; padding: 10px;")
+                qr_label.setStyleSheet("background-color: black; color: white; padding: 10px;")
                 layout.addWidget(qr_label)
             else:
                 raise Exception("qrencode failed")
