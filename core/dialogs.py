@@ -1,6 +1,6 @@
 # ==============================================================
 # Smart 2FA Manager (Gui)
-# https://github.com/smartlegionlab/smart-2fa-manager-python-gui
+# https://github.com/smartlegionlab/smart-2fa-manager-desktop
 # Copyright (©) 2026, Alexander Suvorov. All rights reserved.
 # License: BSD 3-Clause
 # ==============================================================
@@ -473,7 +473,7 @@ class AboutDialog(QDialog):
         layout.addWidget(license_label)
 
         repo_label = QLabel(
-            'Repository: <a href="https://github.com/smartlegionlab/smart-2fa-manager-python-gui" style="color: #2a82da; text-decoration: none;">github.com/smartlegionlab/smart-2fa-manager-python-gui</a>'
+            'Repository: <a href="https://github.com/smartlegionlab/smart-2fa-manager-desktop" style="color: #2a82da; text-decoration: none;">github.com/smartlegionlab/smart-2fa-manager-desktop</a>'
         )
         repo_label.setOpenExternalLinks(True)
         repo_label.setTextFormat(Qt.RichText)

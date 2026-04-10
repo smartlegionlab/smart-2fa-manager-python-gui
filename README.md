@@ -1,4 +1,4 @@
-# Smart 2FA Manager (GUI) <sup>v1.0.2</sup>
+# Smart 2FA Manager (Desktop) <sup>v1.1.0</sup>
 
 ---
 
@@ -6,11 +6,11 @@
 
 ---
 
-[![GitHub top language](https://img.shields.io/github/languages/top/smartlegionlab/smart-2fa-manager-python-gui)](https://github.com/smartlegionlab/smart-2fa-manager-python-gui)
-[![GitHub license](https://img.shields.io/github/license/smartlegionlab/smart-2fa-manager-python-gui)](https://github.com/smartlegionlab/smart-2fa-manager-python-gui/blob/master/LICENSE)
-[![GitHub release](https://img.shields.io/github/v/release/smartlegionlab/smart-2fa-manager-python-gui)](https://github.com/smartlegionlab/smart-2fa-manager-python-gui/)
-[![GitHub stars](https://img.shields.io/github/stars/smartlegionlab/smart-2fa-manager-python-gui?style=social)](https://github.com/smartlegionlab/smart-2fa-manager-python-gui/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/smartlegionlab/smart-2fa-manager-python-gui?style=social)](https://github.com/smartlegionlab/smart-2fa-manager-python-gui/network/members)
+[![GitHub top language](https://img.shields.io/github/languages/top/smartlegionlab/smart-2fa-manager-desktop)](https://github.com/smartlegionlab/smart-2fa-manager-desktop)
+[![GitHub license](https://img.shields.io/github/license/smartlegionlab/smart-2fa-manager-desktop)](https://github.com/smartlegionlab/smart-2fa-manager-desktop/blob/master/LICENSE)
+[![GitHub release](https://img.shields.io/github/v/release/smartlegionlab/smart-2fa-manager-desktop)](https://github.com/smartlegionlab/smart-2fa-manager-desktop/)
+[![GitHub stars](https://img.shields.io/github/stars/smartlegionlab/smart-2fa-manager-desktop?style=social)](https://github.com/smartlegionlab/smart-2fa-manager-desktop/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/smartlegionlab/smart-2fa-manager-desktop?style=social)](https://github.com/smartlegionlab/smart-2fa-manager-desktop/network/members)
 
 ---
 
@@ -30,7 +30,7 @@ No cloud, no phone required. Store your secrets locally, generate codes, create 
 
 ## Interface
 
-![Main Interface](https://github.com/smartlegionlab/smart-2fa-manager-python-gui/raw/master/data/images/logo.png)
+![Main Interface](https://github.com/smartlegionlab/smart-2fa-manager-desktop/raw/master/data/images/logo.png)
 
 ---
 
@@ -53,8 +53,8 @@ sudo dnf install python3-pyqt5 oathtool gnupg2 qrencode
 
 1. Clone repository:
    ```bash
-   git clone https://github.com/smartlegionlab/smart-2fa-manager-python-gui.git
-   cd smart-2fa-manager-python-gui
+   git clone https://github.com/smartlegionlab/smart-2fa-manager-desktop.git
+   cd smart-2fa-manager-desktop
    ```
 
 2. Run:
@@ -67,7 +67,7 @@ sudo dnf install python3-pyqt5 oathtool gnupg2 qrencode
    Create file `~/Desktop/smart-2fa.sh`:
    ```bash
    #!/bin/bash
-   cd ~/smart-2fa-manager-python-gui
+   cd ~/smart-2fa-manager-desktop
    python main.py
    ```
    
@@ -189,7 +189,7 @@ python main.py
 ## Author & Repository
 
 - **Author:** [@smartlegionlab](https://github.com/smartlegionlab/)
-- **Repository:** [smartlegionlab/smart-2fa-manager-python-gui](https://github.com/smartlegionlab/smart-2fa-manager-python-gui)
+- **Repository:** [smartlegionlab/smart-2fa-manager-desktop](https://github.com/smartlegionlab/smart-2fa-manager-desktop)
 - **Bash version:** [smart-2fa-manager-bash](https://github.com/smartlegionlab/smart-2fa-manager-bash)
 - **Python CLI:** [smart-2fa-manager-python-cli](https://github.com/smartlegionlab/smart-2fa-manager-python-cli)
 - **License:** [BSD 3-Clause](LICENSE)
@@ -208,4 +208,4 @@ python main.py
 
 ## License
 
-BSD 3-Clause License - Copyright (c) 2026, [Alexander Suvorov](https://github.com/smartlegionlab)
+[BSD 3-Clause License](LICENSE) - Copyright (c) 2026, [Alexander Suvorov](https://github.com/smartlegionlab)

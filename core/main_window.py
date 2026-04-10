@@ -1,6 +1,6 @@
 # ==============================================================
 # Smart 2FA Manager (Gui)
-# https://github.com/smartlegionlab/smart-2fa-manager-python-gui
+# https://github.com/smartlegionlab/smart-2fa-manager-desktop
 # Copyright (©) 2026, Alexander Suvorov. All rights reserved.
 # License: BSD 3-Clause
 # ==============================================================

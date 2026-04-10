@@ -1,6 +1,6 @@
 # ==============================================================
 # Smart 2FA Manager (Gui)
-# https://github.com/smartlegionlab/smart-2fa-manager-python-gui
+# https://github.com/smartlegionlab/smart-2fa-manager-desktop
 # Copyright (©) 2026, Alexander Suvorov. All rights reserved.
 # License: BSD 3-Clause
 # ==============================================================
@@ -12,7 +12,7 @@ from typing import Optional, Dict
 CONFIG_DIR = Path.home() / ".2fa"
 SECRETS_ENC = CONFIG_DIR / "secrets.gpg"
 BACKUP_DIR = CONFIG_DIR / "backups"
-VERSION = "v1.0.2"
+VERSION = "v1.1.0"
 
 
 class TOTPManager:
