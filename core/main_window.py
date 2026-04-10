@@ -126,6 +126,11 @@ class MainWindow(QMainWindow):
         self.btn_refresh.clicked.connect(self.refresh_codes)
         self.btn_refresh.setEnabled(False)
 
+        self.btn_lock = QPushButton("🔒  Lock (Ctrl + L)")
+        self.btn_lock.setMinimumHeight(35)
+        self.btn_lock.clicked.connect(self.lock_storage)
+        self.btn_lock.setEnabled(True)
+
         self.btn_backup = QPushButton("💾 Backup")
         self.btn_backup.setMinimumHeight(35)
         self.btn_backup.clicked.connect(self.create_backup)
@@ -138,6 +143,7 @@ class MainWindow(QMainWindow):
         button_layout.addWidget(self.btn_add)
         button_layout.addWidget(self.btn_refresh)
         button_layout.addStretch()
+        button_layout.addWidget(self.btn_lock)
         button_layout.addWidget(self.btn_backup)
         button_layout.addWidget(self.btn_restore)
 
