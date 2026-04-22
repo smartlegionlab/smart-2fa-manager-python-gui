@@ -4,6 +4,7 @@
 # Copyright (©) 2026, Alexander Suvorov. All rights reserved.
 # License: BSD 3-Clause
 # ==============================================================
+import os
 import sys
 import time
 from pathlib import Path
@@ -26,17 +27,15 @@ from PyQt5.QtWidgets import (
     QApplication
 )
 from PyQt5.QtCore import Qt, QTimer
-from PyQt5.QtGui import QFont
+from PyQt5.QtGui import QFont, QIcon
 
+from core.dialogs.about_dialog import AboutDialog
+from core.dialogs.add_service_dialog import AddServiceDialog
+from core.dialogs.backup_restore_dialog import BackupRestoreDialog
+from core.dialogs.get_code_dialog import GetCodeDialog
+from core.dialogs.init_dialog import InitDialog
+from core.dialogs.unlock_dialog import UnlockDialog
 from core.totp_manager import TOTPManager
-from core.dialogs import (
-    InitDialog,
-    UnlockDialog,
-    AddServiceDialog,
-    GetCodeDialog,
-    BackupRestoreDialog,
-    AboutDialog
-)
 from core import __version__ as ver
 
 
@@ -50,6 +49,8 @@ class MainWindow(QMainWindow):
         self.setWindowTitle(f"Smart 2FA Manager {ver}")
         self.resize(900, 500)
 
+        self.setup_application_icon()
+
         self.setup_ui()
         self.center_window()
 
@@ -57,6 +58,22 @@ class MainWindow(QMainWindow):
             self.show_init_dialog()
         else:
             self.show_unlock_dialog()
+
+    def setup_application_icon(self):
+        icon_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "icons", "icon.png")
+
+        if not os.path.exists(icon_path):
+            icon_path = os.path.join(os.path.dirname(__file__), "icon.png")
+
+        if os.path.exists(icon_path):
+            icon = QIcon(icon_path)
+            self.setWindowIcon(icon)
+
+    def create_desktop_entry(self):
+        from core.dialogs.desktop_entry_dialog import DesktopEntryDialog
+
+        dialog = DesktopEntryDialog(self)
+        dialog.exec_()
 
     def get_totp_time_remaining(self) -> int:
         current_time = int(time.time())
@@ -168,6 +185,12 @@ class MainWindow(QMainWindow):
         menubar = self.menuBar()
 
         file_menu = menubar.addMenu("File")
+
+        if sys.platform.startswith('linux'):
+            desktop_entry_action = QAction('Create Desktop Entry...', self)
+            desktop_entry_action.triggered.connect(self.create_desktop_entry)
+            file_menu.addAction(desktop_entry_action)
+            file_menu.addSeparator()
 
         lock_action = QAction("Lock", self)
         lock_action.setShortcut("Ctrl+L")
@@ -530,7 +553,7 @@ class MainWindow(QMainWindow):
         if not self.is_unlocked:
             return
 
-        from core.dialogs import QRCodeDialog
+        from core.dialogs.qr_code_dialog import QRCodeDialog
         dialog = QRCodeDialog(self, service, secret)
         dialog.exec_()
 

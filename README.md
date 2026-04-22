@@ -1,4 +1,4 @@
-# Smart 2FA Manager (Desktop) <sup>v1.1.2</sup>
+# Smart 2FA Manager (Desktop) <sup>v1.1.3</sup>
 
 ---
 
@@ -93,21 +93,48 @@ Then in the GUI:
 
 ## Commands (GUI)
 
-| Button | Description |
-|--------|-------------|
-| `+ Add Service` | Add a new TOTP service |
-| `🔄 Refresh Codes` | Manually refresh all codes |
-| `💾 Backup` | Create encrypted backup with timestamp |
-| `📂 Restore` | Restore from encrypted backup |
+| Button             | Description                            |
+|--------------------|----------------------------------------|
+| `+ Add Service`    | Add a new TOTP service                 |
+| `🔄 Refresh Codes` | Manually refresh all codes             |
+| `💾 Backup`        | Create encrypted backup with timestamp |
+| `📂 Restore`       | Restore from encrypted backup          |
 
 ### Table Actions
 
-| Button | Description |
-|--------|-------------|
-| `📋 Copy` | Copy TOTP code to clipboard |
-| `🔑 Get` | Show TOTP code in dialog |
-| `📱 QR` | Show QR code for phone import |
-| `🗑 Delete` | Delete service |
+| Button      | Description                   |
+|-------------|-------------------------------|
+| `📋 Copy`   | Copy TOTP code to clipboard   |
+| `🔑 Get`    | Show TOTP code in dialog      |
+| `📱 QR`     | Show QR code for phone import |
+| `🗑 Delete` | Delete service                |
+
+---
+
+### Desktop Integration (Linux)
+
+**Creating Application Shortcuts:**
+
+The application allows you to create desktop entries directly from the menu:
+
+1. **Go to File → Create Desktop Entry**
+2. **Choose locations:**
+   - ✓ Application Menu (`~/.local/share/applications/`) - adds to system app menu
+   - □ Desktop (`~/Desktop/`) - creates shortcut on desktop
+3. **Click "Create Entry"**
+
+**What happens:**
+- Creates `.desktop` file(s) with proper configuration
+- Sets executable permissions automatically
+- Uses application icon if available
+
+**After creation:**
+- **Application Menu**: Log out and back in (or restart desktop) for entry to appear
+- **Desktop shortcut**: May show "Unsecured Application Launcher" warning
+  - Right-click on shortcut → "Allow Launching" or "Trust"
+  - This is a one-time security confirmation
+
+**Note:** This feature is only available on Linux systems with desktop environments that support `.desktop` files (GNOME, KDE, XFCE, etc.).
 
 ---
 
@@ -115,30 +142,30 @@ Then in the GUI:
 
 ### Global Shortcuts
 
-| Shortcut | Action |
-|----------|--------|
-| `Ctrl + L` | Lock storage |
-| `Ctrl + E` | Exit application |
-| `F1` | Show About dialog |
+| Shortcut   | Action                  |
+|------------|-------------------------|
+| `Ctrl + L` | Lock storage            |
+| `Ctrl + E` | Exit application        |
+| `F1`       | Show About dialog       |
 | `Ctrl + /` | Show Keyboard Shortcuts |
 
 ### Services Shortcuts
 
-| Shortcut | Action |
-|----------|--------|
-| `Ctrl + N` | Add new service |
-| `Ctrl + R` | Refresh all codes |
-| `Ctrl + B` | Create backup |
+| Shortcut           | Action              |
+|--------------------|---------------------|
+| `Ctrl + N`         | Add new service     |
+| `Ctrl + R`         | Refresh all codes   |
+| `Ctrl + B`         | Create backup       |
 | `Ctrl + Shift + R` | Restore from backup |
 
 ### Table Actions (when row selected)
 
-| Shortcut | Action |
-|----------|--------|
+| Shortcut   | Action                 |
+|------------|------------------------|
 | `Ctrl + C` | Copy code to clipboard |
-| `Ctrl + G` | Show code in dialog |
-| `Ctrl + Q` | Show QR code dialog |
-| `Del` | Delete service |
+| `Ctrl + G` | Show code in dialog    |
+| `Ctrl + Q` | Show QR code dialog    |
+| `Del`      | Delete service         |
 
 ---
 
@@ -176,7 +203,13 @@ Then in the GUI:
 
 ## Migration from CLI Version
 
-Your existing `~/.2fa/secrets.gpg` works **out of the box** with the GUI version!
+Your existing `~/.2fa/secrets.gpg` file works **without additional settings** in other versions of this ecosystem!
+
+### Ecosystem
+
+- **Bash version:** [smart-2fa-manager-bash](https://github.com/smartlegionlab/smart-2fa-manager-bash)
+- **Python CLI:** [smart-2fa-manager-cli](https://github.com/smartlegionlab/smart-2fa-manager-cli)
+- **Android/Mobile:** [smart-2fa-manager-android](https://github.com/smartlegionlab/smart-2fa-manager-android)
 
 ```bash
 # Just run GUI - it will detect existing storage
@@ -190,8 +223,6 @@ python main.py
 
 - **Author:** [@smartlegionlab](https://github.com/smartlegionlab/)
 - **Repository:** [smartlegionlab/smart-2fa-manager-desktop](https://github.com/smartlegionlab/smart-2fa-manager-desktop)
-- **Bash version:** [smart-2fa-manager-bash](https://github.com/smartlegionlab/smart-2fa-manager-bash)
-- **Python CLI:** [smart-2fa-manager-cli](https://github.com/smartlegionlab/smart-2fa-manager-cli)
 - **License:** [BSD 3-Clause](LICENSE)
 
 ---
